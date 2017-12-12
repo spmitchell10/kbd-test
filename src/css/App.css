@@ -1,0 +1,539 @@
+
+
+/*===============
+  Page Loader
+================*/
+
+.page-loader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fefefe;
+  z-index: 100000;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  font-size: 10px;
+  text-indent: -12345px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  -webkit-animation: spinner 700ms infinite linear;
+  -moz-animation: spinner 700ms infinite linear;
+  -ms-animation: spinner 700ms infinite linear;
+  -o-animation: spinner 700ms infinite linear;
+  animation: spinner 700ms infinite linear;
+
+  z-index: 100001;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/*===============
+      NavBar
+=================*/
+
+
+.main-nav {
+  width: 100%;
+  height: 75px !important;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.97);
+
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+
+  z-index: 0;
+  cursor: pointer;
+
+  -webkit-transition: height 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition: height 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -o-transition: height 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -ms-transition: height 0.27s cubic-bezier(0, 0, 0.58, 1);
+  transition: height 0.27s cubic-bezier(0, 0, 0.58, 1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo{
+  height: 30px;
+}
+
+.inner-nav {
+  display: inline-block;
+  position: relative;
+  float: right;
+  display: none;
+}
+.inner-nav ul {
+  float: right;
+  margin: auto;
+  margin-right: 100px;
+  margin-top: 15px;
+ 
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  
+  text-align: center;
+  line-height: 2.3;
+}
+.inner-nav ul li {
+  float: left;
+  margin-left: 30px;
+  position: relative;
+}
+.inner-nav ul li a {
+  color: #777;
+  letter-spacing: 2px;
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -ms-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+}
+.inner-nav ul > li:first-child > a {
+}
+.inner-nav ul li a:hover,
+.inner-nav ul li a.active {
+  color: #000;
+  text-decoration: none;
+}
+
+.clearlist,
+.clearlist li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.clearlist {
+  flex-direction: column;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  right: 0;
+  top: 64px;
+}
+
+.main-nav.dark {
+  background-color: rgba(10, 10, 10, 0.95);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.main-nav.dark .inner-nav ul > li > a {
+  color: black;
+}
+.main-nav.dark .inner-nav ul > li > a:hover,
+.main-nav.dark .inner-nav ul > li > a.active {
+  color: #7ebf42;
+}
+
+.main-nav.dark .mobile-nav {
+  background-color: transparent;
+  border-color: transparent;
+  color: rgba(255, 255, 255, 0.9);
+}
+.main-nav.dark .mobile-nav:hover,
+.main-nav.dark .mobile-nav.active {
+  color: black;
+}
+
+.mobile-nav {
+  font-size: 2em;
+}
+
+.main-nav.mobile-on.dark .inner-nav {
+  border-top: 1px solid rgba(100, 100, 100, 0.4);
+}
+
+.main-nav.dark .logo,
+.main-nav.dark a.logo:hover {
+  font-size: 18px;
+  font-weight: 800;
+  
+  text-decoration: none;
+  color: black;
+}
+
+.main-nav.dark .mn-sub {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.main-nav.dark .mn-soc-link {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.main-nav.dark .mn-soc-link:hover {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*
+ * Transparent panel style
+ */
+
+.main-nav.transparent {
+  background: transparent !important;
+}
+.main-nav.js-transparent {
+  -webkit-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -o-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  -ms-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1);
+}
+
+/*Burger Menue*/
+
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 20px;
+  right: 40px;
+  top: 25px;
+  z-index: 10000000;
+}
+
+.menu ul li {
+  margin-top: 10px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #7ebf42;
+  height: 15% !important;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: white;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #7ebf42;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  height: 100%;
+}
+
+.bm-menu-wrap{
+  height: 100vh !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: white;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: white;
+  padding: 0.8em;
+}
+.bm-overlay{
+  background: transparent !important;
+}
+/* Styling of overlay */
+
+
+
+/*==============
+  Screen Sizing
+================*/
+
+@media (min-width: 992px) {
+ 
+  .clearlist {
+    flex-direction: row;
+    top: 14px;
+    display: flex;
+  }
+  .inner-nav ul {
+    line-height: 1.3;
+  }
+  .inner-nav {
+    display: flex;
+  }
+  .parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  .page-section {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 576px){
+  .footer{
+    font-size: 9px;
+  }
+
+}
+
+@media (max-width: 992px){
+  .section-title{
+    font-size: 15px;;
+  }
+  .parallax{
+    -webkit-background-size: 85%;
+    background-size: 85%;
+  }
+  
+  .skill-list{
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .portfolio-title {
+    padding: 60px 60px;
+    float: right;
+  }
+  .skill-list {
+    margin: 2em 0 0 0;
+  }
+  .work-title {
+    font-size: 2.5em;
+  }
+  .work-descr {
+    font-size: 1.2em;
+  }
+
+}
+
+/*============
+  Scroll Arrow
+==============*/
+
+.scrollArrow {
+  margin-top: 80px;
+}
+.scrollArrow a span {
+  position: relative;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.scrollArrowHome {
+  padding-bottom: 20px;
+}
+.scrollArrowHome a span {
+  position: relative;
+  margin-bottom: 40px;
+  bottom: 0;
+  
+  width: 15px;
+  height: 15px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+/*=================
+   Home
+==================*/
+
+.page-home-leftside{
+  margin-left: 140px;
+  margin-top: 100px;
+}
+
+.page-home-leftside p {
+  font-weight: 200px !important;
+  font-size: 12px;
+}
+
+.page-home-rightside{
+  position: absolute;
+  align-items: right;
+  margin-left: 100px;
+
+}
+
+.page-home-rightside img{
+  width: 115px;
+  margin-left: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.bar1{
+  margin-top: 300px;
+}
+
+.bar2{
+  margin-top: 150px;
+  position: absolute;
+}
+
+
+
+/*=================
+   People
+==================*/
+
+.page-people{
+  background: #315e63;
+  
+}
+
+/*================
+   Platform
+=================-*/
+
+.page-platform{
+  background: #efefef;
+}
+
+
+
